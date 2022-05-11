@@ -27,9 +27,9 @@
 * Live working HTML templates.
 
 ### Screenshots
-![](/JsonPowerDB/Screenshots/1.PNG)
-![](/Screenshots/2.PNG)
-![](/Screenshots/3.PNG)
-![](/Screenshots/4.PNG)
-![](/Screenshots/5.PNG)
+![](/Screenshots/1.png)
+![](/Screenshots/2.png)
+![](/Screenshots/3.png)
+![](/Screenshots/4.png)
+![](/Screenshots/5.png)
 
