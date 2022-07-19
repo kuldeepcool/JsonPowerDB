@@ -9,6 +9,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
        <script src="jpdb-common.js"></script>
+       <script src="update.js"></script>
     </head>
     <body>
         <h1 id="header" style="font-size: 15px;">Update a record</h1>
@@ -35,43 +36,6 @@
             <input type="button" class="btn btn-primary" id="empSave" value="Save" onclick="updateRecord();">
         </form>
     </div>
-    <script>
-    function validateAndGetFormData() {
-    var empIdVar = $("#empId").val();
-    if (empIdVar === "") {
-    alert("Employee ID is a required Value");
-    $("#empId").focus();
-    return "";
-    }
-    var empNameVar = $("#empName").val();
-    var empEmailVar = $("#empEmail").val();
-    if (empNameVar === "" && empEmailVar === "") {
-    alert("Enter atleast either a new email ID or a new name to perform an update!");
-    $("#empId").focus();
-    return "";
-    }
-    var jsonStrObj = {
-    empId: empIdVar,
-    empName: empNameVar,
-    empEmail: empEmailVar,
-    };
-    return JSON.stringify(jsonStrObj);
-    }
-    function updateRecord() {
-    var jsonStr = validateAndGetFormData();
-    if (jsonStr === "") {
-    return;
-    }
-    var removeReqStr = createUPDATERecordRequest("90939076|-31949282520496781|90940641", jsonStr, "SAMPLE_DB", "Emp-rel", parseInt(document.getElementById("empId").value));
-    alert(removeReqStr);
-    jQuery.ajaxSetup({ async: false });
-    var resultObj = executeCommandAtGivenBaseUrl(removeReqStr,
-    "http://api.login2explore.com:5577", "/api/iml");
-    alert(JSON.stringify(resultObj));
-    jQuery.ajaxSetup({ async: true });
-    resetForm();
-    }
-    </script>
     <button id="footer" onclick="location.href='../index.html'">Home</button>
 </body>
 </html>
