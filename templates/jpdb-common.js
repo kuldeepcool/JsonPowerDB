@@ -32,7 +32,7 @@ function executeCommandAtGivenBaseUrl(reqString, dbBaseUrl, apiEndPointUrl) {
 }
 
 //This function creates the request to remove the data of given record number 
-function createREMOVERecordRequest(token, dbName, relName, recNo) {
+function createREMOVERecordRequest(token, dbName, relName, recNo, jsonObj) {
     var req = "{\n"
             + "\"token\" : \""
             + token
@@ -44,6 +44,9 @@ function createREMOVERecordRequest(token, dbName, relName, recNo) {
             + relName
             + "\",\n" + "\"record\":"
             + recNo
+            + "\",\n"
+            + "\"jsonStr\": "
+            + jsonObj
             + "\n"
             + "}";
     return req;
