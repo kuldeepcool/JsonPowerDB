@@ -19,7 +19,7 @@ function validateAndGetFormData() {
     if (jsonStr === "") {
     return;
     }
-    var removeReqStr = createREMOVERecordRequest("90939076|-31949282520496781|90940641", "SAMPLE_DB", "Emp-rel", parseInt(document.getElementById("index").value));
+    var removeReqStr = createREMOVERecordRequest("90939076|-31949293955470201|90940210", "SAMPLE_DB", "Emp-rel", parseInt(document.getElementById("index").value));
     alert(removeReqStr);
     jQuery.ajaxSetup({ async: false });
     var resultObj = executeCommandAtGivenBaseUrl(removeReqStr,

@@ -21,7 +21,7 @@ function getEmployee() {
     if (jsonStr === "") {
         return;
     }
-    var getReqStr = createGETRequest("90939076|-31949282520496781|90940641",
+    var getReqStr = createGETRequest("90939076|-31949293955470201|90940210",
         "SAMPLE_DB", "Emp-rel", jsonStr);
     alert(getReqStr);
     jQuery.ajaxSetup({ async: false });

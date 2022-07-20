@@ -25,7 +25,7 @@ function updateRecord() {
         if (jsonStr === "") {
         return;
         }
-        var removeReqStr = createUPDATERecordRequest("90939076|-31949282520496781|90940641", jsonStr, "SAMPLE_DB", "Emp-rel", parseInt(document.getElementById("empId").value));
+        var removeReqStr = createUPDATERecordRequest("90939076|-31949293955470201|90940210", jsonStr, "SAMPLE_DB", "Emp-rel", parseInt(document.getElementById("empId").value));
         alert(removeReqStr);
         jQuery.ajaxSetup({ async: false });
         var resultObj = executeCommandAtGivenBaseUrl(removeReqStr,
