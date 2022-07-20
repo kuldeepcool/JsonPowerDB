@@ -1,4 +1,4 @@
-function validateAndGetFormData() {
+    function validateAndGetFormData() {
     var empIdVar = $("#empId").val();
     if (empIdVar === "") {
     alert("Employee ID Required Value");
